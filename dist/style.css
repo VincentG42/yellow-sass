@@ -11,7 +11,7 @@ header {
   padding: 0 25em;
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  position: absolute;
   width: 100%; }
   header img {
     height: 100%; }
@@ -69,10 +69,10 @@ header {
 
 #about {
   background-color: white;
+  padding: 3em;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 3em; }
+  align-items: center; }
   #about h2 {
     font-weight: bolder;
     font-size: 2.2em;
@@ -86,7 +86,7 @@ header {
     margin-bottom: 2em; }
 
 #projects {
-  background: repeating-linear-gradient(135deg, #bababa, #bababa 1px, white 1px, white 5px);
+  background: repeating-linear-gradient(-45deg, rgba(204, 204, 204, 0.3), rgba(204, 204, 204, 0.3) 1px, rgba(238, 238, 238, 0.3) 1px, #eeeeee80 5px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,9 +94,7 @@ header {
   #projects h2 {
     font-weight: bolder;
     font-size: 2.2em;
-    color: #545454;
-    margin-bottom: 2em;
-    margin-bottom: 0em; }
+    color: #545454; }
   #projects p {
     width: 50%;
     text-align: center;
@@ -105,3 +103,145 @@ header {
     margin-bottom: 2em; }
   #projects div img {
     margin: -3px; }
+
+#testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../images/bkg-testimonial.jpg");
+  background-size: cover;
+  color: white; }
+  #testimonials h2 {
+    font-weight: bolder;
+    font-size: 2.2em;
+    color: #545454;
+    margin-top: 1.5em;
+    color: white; }
+  #testimonials img {
+    margin: 1.5em 0;
+    border-radius: 50%; }
+  #testimonials > :nth-child(3) {
+    width: 50%;
+    padding: 2em;
+    padding-bottom: 4em;
+    background-color: #6a4d8a;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 52% 75%, 50% 85%, 48% 75%, 0% 75%); }
+    #testimonials > :nth-child(3) p {
+      line-height: 2em;
+      text-align: center;
+      font-size: small; }
+  #testimonials > :last-child {
+    padding: 3em 0;
+    display: flex;
+    gap: 10px; }
+    #testimonials > :last-child svg {
+      fill: white;
+      height: 1em; }
+
+#services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.5em; }
+  #services h2 {
+    font-weight: bolder;
+    font-size: 2.2em;
+    color: #545454; }
+  #services > p {
+    width: 50%;
+    text-align: center;
+    font-size: small;
+    color: #878787;
+    margin-bottom: 2em; }
+  #services div {
+    display: flex;
+    justify-content: center;
+    gap: 2em; }
+    #services div article {
+      width: 25em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2em; }
+      #services div article:nth-child(1) svg {
+        width: 3em;
+        fill: #f18b6d; }
+      #services div article:nth-child(1) h3 {
+        color: #f18b6d;
+        margin: 1em 0; }
+      #services div article:nth-child(2) svg {
+        width: 3em;
+        fill: #ffb81c; }
+      #services div article:nth-child(2) h3 {
+        color: #ffb81c;
+        margin: 1em 0; }
+      #services div article:nth-child(3) svg {
+        width: 3em;
+        fill: #6a4d8a; }
+      #services div article:nth-child(3) h3 {
+        color: #6a4d8a;
+        margin: 1em 0; }
+      #services div article p {
+        color: #878787;
+        text-align: center; }
+
+#blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222f36;
+  padding: 3em 0; }
+  #blog h2 {
+    font-weight: bolder;
+    font-size: 2.2em;
+    color: #545454;
+    color: white; }
+  #blog > p {
+    width: 50%;
+    text-align: center;
+    font-size: small;
+    color: #878787;
+    margin-bottom: 2em; }
+  #blog > a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    background-color: #ffb81c;
+    padding: 1em 3em;
+    border-radius: 3px;
+    margin-bottom: 4em;
+    display: flex;
+    align-items: center;
+    gap: 1em; }
+    #blog > a svg {
+      fill: white;
+      height: 1em; }
+  #blog > div {
+    padding-top: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 2em; }
+    #blog > div article {
+      width: 23em;
+      background-color: white; }
+      #blog > div article img {
+        width: 100%; }
+      #blog > div article > div {
+        padding: 1.5em; }
+        #blog > div article > div h3 {
+          color: #5a5850;
+          font-size: 1.5em;
+          margin-bottom: 2em; }
+        #blog > div article > div p {
+          color: #878787;
+          font-size: 0.9em;
+          margin-bottom: 3em; }
+        #blog > div article > div a {
+          display: flex;
+          align-items: center;
+          gap: 1em;
+          color: #ffb81c;
+          text-decoration: none; }
+          #blog > div article > div a svg {
+            fill: #ffb81c;
+            height: 1em; }

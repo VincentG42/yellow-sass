@@ -18,7 +18,7 @@ header{
     padding: 0 25em;
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     width: 100%;
 
     img{
@@ -101,13 +101,12 @@ header{
 
 #about{
     background-color: $white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 3em;
+    @include section-style;
 
     h2{
-        @include h2-style
+        @include h2-style;
+        margin-bottom: 2em;
     }
 
     p{
@@ -116,20 +115,17 @@ header{
 }
 
 #projects{
-    background: repeating-linear-gradient(
-        135deg,
-        lighten($colorsH, 40%),
-        lighten($colorsH, 40%) 1px,
-        lighten($colorsH, 75%) 1px,
-        lighten($colorsH, 75%) 5px
-    );
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: repeating-linear-gradient(-45deg, 
+                rgba(204, 204, 204, 0.3), 
+                rgba(204, 204, 204, 0.3) 1px, 
+                rgba(238, 238, 238, 0.3) 1px,
+                #eeeeee80 5px);
+    @include section-style;
+
     padding-top: 3em;
+
     h2{
         @include h2-style;
-        margin-bottom: 0em;
 
     }
 
@@ -141,3 +137,200 @@ header{
     }
 
 }
+
+#testimonials{
+    @include section-style;
+    background-image: url('../images/bkg-testimonial.jpg');
+    background-size: cover;
+    color: $white;
+
+    
+    h2{
+        @include h2-style;
+        margin-top: 1.5em;
+        color: $white;
+
+
+    }
+
+    img{
+        margin: 1.5em 0;
+        border-radius: 50%;
+    }
+
+    >:nth-child(3){
+
+        width: 50%;
+        padding: 2em;
+        padding-bottom: 4em;
+        background-color: $purple;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 52% 75%, 50% 85%, 48% 75%, 0% 75%);
+
+        p{
+            line-height: 2em;
+            text-align: center;
+            font-size: small;
+        }
+    }
+
+    >:last-child{
+        padding: 3em 0;
+        display: flex;
+        gap: 10px;
+
+        svg{
+            fill: $white;
+            height: 1em;
+        }
+    }
+}
+
+#services{
+
+    @include section-style;
+    padding: 3.5em;
+
+    h2{
+        @include h2-style;
+    }
+
+    >p{
+        @include p-style
+    }
+
+    div{
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+
+        article{
+            width: 25em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2em;
+
+            &:nth-child(1) svg{
+                width: 3em;
+                fill: $coral;
+            }
+            
+            &:nth-child(1) h3{
+                color : $coral;
+                margin: 1em 0;
+            }
+            &:nth-child(2) svg{
+                width: 3em;
+                fill: $yellow;
+            }
+            
+            &:nth-child(2) h3{
+                color : $yellow;
+                margin: 1em 0;
+            }
+
+            &:nth-child(3) svg{
+                width: 3em;
+                fill: $purple;
+            }
+            
+            &:nth-child(3) h3{
+                color : $purple;
+                margin: 1em 0;
+            }
+
+            p{
+                color: lighten($colorsH, 20%);
+                text-align: center;
+
+            }
+
+
+        }
+    }
+}
+
+#blog{
+    @include section-style;
+    background-color: $darkGrey;
+    padding: 3em 0;
+
+    h2{
+        @include h2-style;
+        color: $white;
+    }
+    >p{
+        @include p-style;
+    }
+
+    >a{
+        text-decoration: none;
+        color: $white;
+        font-size: 12px;
+        background-color: $yellow;
+        padding: 1em 3em;
+        border-radius:  3px;
+        margin-bottom: 4em;
+
+        display: flex;
+        align-items: center;
+        gap:1em;
+
+        svg{
+            fill: $white;
+            height: 1em;
+        }
+
+    }
+
+    >div{
+        padding-top: 2em;
+        display: flex;
+        justify-content: center;
+        gap:2em;
+
+        article{
+            width: 23em;
+            background-color: $white;
+
+            img{
+                width: 100%;
+            }
+
+            >div{
+                padding: 1.5em;
+
+                h3{
+                    color:lighten($black, 20%);
+                    font-size: 1.5em;
+                    margin-bottom: 2em;
+
+                }
+
+                p{
+                    color: lighten($colorsH, 20%);
+                    font-size: 0.9em;
+                    margin-bottom: 3em;
+                }
+
+                a{
+                    display: flex;
+                    align-items: center;
+                    gap:1em;
+                    color: $yellow;
+                    text-decoration: none;
+
+                    svg{
+                        fill: $yellow;
+                        height: 1em;
+                    }
+                }
+
+            }
+
+
+        }
+
+    }
+}
+
