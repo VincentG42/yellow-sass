@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import './partials/colors';
+@import './partials/mixin';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    height: 4em;
+    margin-top: 1.5em;
+    padding: 0 25em;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+
+    img{
+
+        height: 100%;
+    }
+
+    ul{
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5em;
+
+        li{
+            list-style: none;
+
+            a{
+                font-family: 'Lato', sans-serif;
+                font-weight: bold;
+                text-transform: capitalize;
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+
+#hero{
+    background-image: url('../images/bkg-hero-header.jpg');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+
+    >div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2em;
+
+
+        h1{
+            font-weight: bolder;
+            font-size:5em;
+
+
+            span{
+                color: $yellow;
+            }
+        }
+
+        p{
+            width: 75%;
+            font-weight: 200;
+        }
+
+        >div button:nth-child(1){
+            @include button-style;
+            border:$white;
+            background: rgba($darkGrey, 0.5);
+            border: $white solid 3px;
+
+        }
+
+        
+        >div button:nth-child(2){
+            @include button-style;
+            background-color: $yellow;
+            border:none;
+            
+        }
+
+    }
+}
+
