@@ -45,9 +45,24 @@ header {
     gap: 2em; }
     #hero > div h1 {
       font-weight: bolder;
-      font-size: 5em; }
-      #hero > div h1 span {
-        color: #ffb81c; }
+      font-size: 5em;
+      position: relative; }
+      #hero > div h1 span::before {
+        position: absolute;
+        content: '';
+        height: 15px;
+        width: 15px;
+        bottom: 25%;
+        left: 25%;
+        background-color: #ffb81c; }
+      #hero > div h1 span::after {
+        position: absolute;
+        content: '';
+        height: 15px;
+        width: 15px;
+        bottom: 26%;
+        left: 47%;
+        background-color: #ffb81c; }
     #hero > div p {
       width: 75%;
       font-weight: 200; }
