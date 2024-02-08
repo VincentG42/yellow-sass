@@ -207,9 +207,9 @@ header {
     color: white;
     font-size: 12px;
     background-color: #ffb81c;
-    padding: 1em 3em;
+    padding: 1.2em 3em;
     border-radius: 3px;
-    margin-bottom: 4em;
+    margin: 4em 0;
     display: flex;
     align-items: center;
     gap: 1em; }
@@ -245,3 +245,117 @@ header {
           #blog > div article > div a svg {
             fill: #ffb81c;
             height: 1em; }
+
+#our_team {
+  display: flex;
+  justify-content: center;
+  padding: 2em 0;
+  background-image: url("../images/bkg-counter.jpg");
+  background-size: cover;
+  background-position: center; }
+  #our_team div {
+    color: white;
+    width: 20%;
+    text-align: center;
+    position: relative; }
+    #our_team div p:nth-child(1) {
+      font-weight: bolder;
+      font-size: 4em; }
+    #our_team div p:nth-child(2) {
+      font-weight: bold;
+      font-size: 1.2em; }
+  #our_team div:nth-child(2)::before {
+    content: "";
+    height: 90%;
+    background-color: white;
+    width: 1px;
+    position: absolute;
+    left: 0;
+    top: 5px; }
+  #our_team div:nth-child(2)::after {
+    content: "";
+    height: 90%;
+    background-color: white;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 5px; }
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0; }
+  #contact h2 {
+    font-weight: bolder;
+    font-size: 2.2em;
+    color: #545454;
+    margin-bottom: 2em; }
+  #contact svg {
+    height: 1em;
+    fill: #878787; }
+  #contact > div {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5em; }
+    #contact > div > div {
+      display: flex;
+      width: 30%;
+      gap: 2em; }
+      #contact > div > div > p {
+        color: lightgray; }
+        #contact > div > div > p:first-child {
+          color: #ffb81c;
+          position: relative; }
+          #contact > div > div > p:first-child::after {
+            content: "";
+            height: 90%;
+            background-color: lightgray;
+            width: 1px;
+            position: absolute;
+            right: -15px;
+            top: 5px; }
+      #contact > div > div div {
+        display: flex;
+        flex-direction: column; }
+      #contact > div > div:last-child {
+        display: flex;
+        justify-content: end;
+        gap: 1em; }
+  #contact form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2em; }
+    #contact form > div:first-child {
+      display: flex;
+      justify-content: space-between; }
+      #contact form > div:first-child div {
+        display: flex;
+        flex-direction: column;
+        width: 30%; }
+    #contact form label {
+      color: #878787; }
+    #contact form input {
+      border: #bababa solid 1px;
+      background-color: #fafafa;
+      height: 2.5em; }
+    #contact form > div:nth-child(2) {
+      width: 100%;
+      display: flex;
+      flex-direction: column; }
+      #contact form > div:nth-child(2) textarea {
+        border: #bababa solid 1px;
+        background-color: #fafafa; }
+    #contact form > div:last-child {
+      display: flex;
+      justify-content: end; }
+      #contact form > div:last-child button {
+        color: white;
+        font-weight: 600;
+        background-color: #ffb81c;
+        border: none;
+        padding: 1em 5em;
+        border-radius: 5px; }

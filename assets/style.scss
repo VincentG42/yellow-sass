@@ -268,9 +268,9 @@ header{
         color: $white;
         font-size: 12px;
         background-color: $yellow;
-        padding: 1em 3em;
+        padding: 1.2em 3em;
         border-radius:  3px;
-        margin-bottom: 4em;
+        margin: 4em 0;
 
         display: flex;
         align-items: center;
@@ -332,5 +332,169 @@ header{
         }
 
     }
+}
+
+#our_team{
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+    background-image: url('../images/bkg-counter.jpg');
+    background-size: cover;
+    background-position: center;
+
+    
+    div{
+        color: $white;
+        width: 20%;
+        text-align: center;
+        position: relative;
+
+        p:nth-child(1){
+            font-weight: bolder;
+            font-size: 4em;
+
+        }
+        p:nth-child(2){
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    }
+
+    div:nth-child(2)::before{
+        content: "";
+        height: 90%;
+        background-color: $white;
+        width: 1px;
+        position: absolute;
+        left: 0;
+        top: 5px;
+    }
+    div:nth-child(2)::after{
+        content: "";
+        height: 90%;
+        background-color: $white;
+        width: 1px;
+        position: absolute;
+        right: 0;
+        top: 5px;
+    }
+}
+
+#contact{
+    @include section-style;
+    padding:2em 0;
+    
+    h2{
+        @include h2-style;
+        margin-bottom: 2em;
+    }
+
+    svg{
+        height: 1em;
+        fill:  lighten($colorsH, 20%);
+    }
+
+    >div{
+        width:70%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2.5em;
+
+        >div{
+            display: flex;
+            
+            width: 30%;
+            gap:2em;
+
+            >p{
+                color: lightgray;
+
+                &:first-child{
+                    color: $yellow;
+                    position: relative;
+
+                    &::after{
+                        content: "";
+                        height: 90%;
+                        background-color: lightgray;
+                        width: 1px;
+                        position: absolute;
+                        right:-15px;
+                        top: 5px;
+                    }
+                }
+
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+            }
+
+            &:last-child{
+                display: flex;
+                justify-content: end;
+                gap:1em;
+            }
+
+        }
+        
+    }
+
+    form{
+
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap:2em;
+        
+
+        >div:first-child{
+            display: flex;
+            justify-content: space-between;
+
+            div{
+                display: flex;
+                flex-direction: column;
+                width: 30%;
+                
+            }
+        }
+
+        label{
+            color:lighten($colorsH, 20%);
+        }
+        input{
+            border: lighten($colorsH, 40%) solid 1px;
+            background-color: lighten($colorsH, 65%);
+            height: 2.5em;
+        }
+        >div:nth-child(2){
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            textarea{
+        
+                border: lighten($colorsH, 40%) solid 1px;
+                background-color: lighten($colorsH, 65%);
+            }
+        }
+
+        >div:last-child{
+            display: flex;
+            justify-content: end;
+
+            button{
+                color: $white;
+                font-weight: 600;
+                background-color: $yellow;
+                border:none;
+                padding: 1em 5em;
+                border-radius: 5px;
+            }
+        }
+    }
+
 }
 
