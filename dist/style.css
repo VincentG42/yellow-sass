@@ -80,7 +80,7 @@ header {
       color: white;
       font-weight: 500;
       background-color: #ffb81c;
-      border: none; }
+      border: #ffb81c solid 3px; }
 
 #about {
   background-color: white;
