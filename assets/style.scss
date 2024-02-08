@@ -131,7 +131,7 @@ header{
 }
 
 #projects{
-    background: repeating-linear-gradient(-45deg, 
+    background: repeating-linear-gradient(135deg, 
                 rgba(204, 204, 204, 0.3), 
                 rgba(204, 204, 204, 0.3) 1px, 
                 rgba(238, 238, 238, 0.3) 1px,
@@ -149,7 +149,7 @@ header{
         @include p-style
     }
     div img{
-        margin:-3px;
+        margin:-7px -3px;
     }
 
 }
