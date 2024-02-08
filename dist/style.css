@@ -366,6 +366,7 @@ footer {
   footer > div:first-of-type {
     display: flex;
     justify-content: center;
+    translate: -15em;
     gap: 5em;
     padding-bottom: 2em; }
     footer > div:first-of-type h3 {

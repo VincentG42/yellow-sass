@@ -505,9 +505,11 @@ footer{
     
     >div:first-of-type{
         display: flex;
-    justify-content: center;
-    gap: 5em;
-    padding-bottom: 2em;
+        justify-content: center;
+        translate:-15em ;
+        gap: 5em;
+        padding-bottom: 2em;
+        
         h3{
             color: $white;
             text-transform: uppercase;
